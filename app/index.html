@@ -1,0 +1,53 @@
+<!--
+File: index.html
+Author: Klíber Regő Benedek
+Copyright: 2024, Klíber Regő Benedek
+Group: Szoft I/N/1
+Date: 2024-05-30
+Github: https://github.com/Elydra555/
+Licenc: GNU GPL
+-->
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellipszoid</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">        
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ellipszoid kerület terület</h1>
+      <div class="form">
+        <div class="input">
+          <label for="aaxis" class="form-label">"A" Tengely</label>
+          <input type="text" class="form-control"
+          id="aaxis">
+        </div>
+        <div class="input">
+          <label for="baxis" class="form-label">"B" Tengely</label>
+          <input type="text" class="form-control"
+          id="baxis">
+        </div>
+        <div class="input">
+          <label for="caxis" class="form-label">"C" Tengely</label>
+          <input type="text" class="form-control"
+          id="caxis">
+        </div>
+        <div>
+          <button class="btn btn-primary mt-2"
+          id="calcBtn">Számít</button>
+        </div>
+        <div class="input">
+          <label for="volume" class="form-label">Térfogat</label>
+          <input type="text" class="form-control"
+          id="volume">
+        </div>
+      </div>
+
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+
