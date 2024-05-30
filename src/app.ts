@@ -8,11 +8,13 @@
 
 class Ell {
 
-    aAxis?: HTMLInputElement | null;
-    bAxis?: HTMLInputElement | null;
-    cAxis?: HTMLInputElement | null;
+    aaxis?: HTMLInputElement | null;
+    baxis?: HTMLInputElement | null;
+    caxis?: HTMLInputElement | null;
+
     volume?: HTMLInputElement | null;
-    calcBtn?: HTMLButtonElement | null;
+
+    calcButton?: HTMLButtonElement | null;
 
     constructor() {
         this.bindHtml();
@@ -20,35 +22,35 @@ class Ell {
     }
 
     bindHtml() {
-        this.aAxis = document.querySelector("#aaxis");
-        this.bAxis = document.querySelector("#baxis");
-        this.cAxis = document.querySelector("#cAxis");
+        this.aaxis = document.querySelector("#aaxis");
+        this.baxis = document.querySelector("#baxis");
+        this.caxis = document.querySelector("#caxis");
         this.volume = document.querySelector("#volume");
-        this.calcBtn = document.querySelector("#calcBtn");
+        this.calcButton = document.querySelector("#calcButton");
     }
 
     handleEvent() {
-        this.calcBtn?.addEventListener('click', () => {
+        this.calcButton?.addEventListener('click', () => {
             this.startCalc();
         });
     }
 
     startCalc() {
-        const aaxis = Number(this.aAxis?.value);
-        const baxis = Number(this.bAxis?.value);
-        const caxis = Number(this.cAxis?.value);
+        const aaxis = Number(this.aaxis?.value);
+        const baxis = Number(this.baxis?.value);
+        const caxis = Number(this.caxis?.value);
         const volume = this.calcVolume(aaxis, baxis, caxis);
+
         this.rederResult(volume);
     }
-
     calcVolume(aaxis: number, baxis: number, caxis: number): number {
-        const calc = 4/3 * Math.PI * aaxis * baxis * caxis
-        return calc
+        return 4/3 * Math.PI * aaxis * baxis * caxis
     }
-    rederResult(calc: number) {
-        if(this.volume){
-            this.volume.value = String(calc)
-        }
+
+    rederResult(volume: number) {
+        if(this.volume) {
+            this.volume.value = String(volume);
+        }     
     }
 }
 
