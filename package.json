@@ -1,7 +1,7 @@
 {
-  "name": "sinto-project",
+  "name": "ellips",
   "version": "0.0.1",
-  "description": "A project created by the Sinto command",
+  "description": "doga",
   "scripts": {
     "start": "browser-sync start --config bs-config.json",
     "build": "gulp"
